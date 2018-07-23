@@ -9,9 +9,7 @@ namespace PreventiveMaintenanceSystem.Models
     public interface IModel
     {
         int Id { get; set; }
-
-        DateTime DateAdded { get; set; }
-
+        DateTime DateAdded { get; set; } 
         DateTime DateModified { get; set; }
     }
 }
