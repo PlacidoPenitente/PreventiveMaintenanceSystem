@@ -21,5 +21,17 @@ namespace PreventiveMaintenanceSystem.Controllers
         {
             return View(_applicationDbContext.Users.ToList());
         }
+
+        public ActionResult AddUser()
+        {
+            return View(new User());
+        }
+
+        public ActionResult AddUserToDatabase(User user)
+        {
+            _applicationDbContext.Users.Add(user);
+            _applicationDbContext.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }

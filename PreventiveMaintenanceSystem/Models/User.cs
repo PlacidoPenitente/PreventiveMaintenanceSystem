@@ -53,9 +53,9 @@ namespace PreventiveMaintenanceSystem.Models
         public string SecurityQuestion2Answer { get; set; }
 
         [DisplayName("Date Added")]
-        public DateTime DateAdded { get; set; }
+        public DateTime DateAdded { get; set; } = DateTime.Now;
 
         [DisplayName("Date Modified")]
-        public DateTime DateModified { get; set; }
+        public DateTime DateModified { get; set; } = DateTime.Now;
     }
 }
